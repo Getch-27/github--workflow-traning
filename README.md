@@ -19,7 +19,6 @@ The workflow performs the following steps:
 and run all adapters.
    - **Only Writer Changed**: Runs tests for all adapters since the writer change can impact how data is written across all components.
    - **Only Config Changed**: Runs tests for the specific parts of the system affected by the config changes.
-   - **Only Main Script Changed**: Runs tests for all adapters with the default config.
 
 ## Updated code Workflow
 
