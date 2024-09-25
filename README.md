@@ -15,12 +15,13 @@ The workflow performs the following steps:
    - Sets environment variables (`changed_adapters`, `changed_writers`, `changed_config`, `changed_main_script`) based on detected changes.
 
 3. **Test Execution**:
-   - **Both Writer & Config Changed**: Runs tests for **all adapters** to ensure comprehensive coverage.
+   - **Both Writer & Config Changed**: prioritize the writer change
+and run all adapters.
    - **Only Writer Changed**: Runs tests for all adapters since the writer change can impact how data is written across all components.
    - **Only Config Changed**: Runs tests for the specific parts of the system affected by the config changes.
    - **Only Main Script Changed**: Runs tests for all adapters with the default config.
 
-## Example Workflow
+## Updated code Workflow
 
 ```yaml
  # Prioritize writer when both writer and config change
